@@ -1,0 +1,24 @@
+name: WebApp MarinaVital
+
+on:
+  push:
+   branch:
+    - main
+  schedule:
+    - cron: '0 * * * *'
+
+jobs:
+ build:
+   runs-on: ubuntu-latest
+   name: build
+
+   steps:
+     - uses: actions/checkout@v4
+       
+     - name: Use Node.js
+     - uses: actions/setup-node@v4
+       with:
+         node-version:'20.x'
+
+     - name: Executar script
+       run: echo "Esse é meu primeiro WF no GHA"
