@@ -2,7 +2,7 @@ name: WebApp MarinaVital
 
 on:
   push:
-   branch:
+   branches:
     - main
   schedule:
     - cron: '0 * * * *'
@@ -10,11 +10,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: build
 
     steps:
-      - name: Fazer checkou no repo
-      - uses: actions/checkout@v4
+      - name: Fazer checkout no repo
+        uses: actions/checkout@v4
 
       - name: Executar script
-        run: echo "Esse é meu primeiro WF no GHA"
+        run: echo "Esse é meu primeiro WF no GHA" 
