@@ -17,3 +17,6 @@ jobs:
 
       - name: Executar script
         run: echo "Esse é meu primeiro WF no GHA" 
+
+      - name: Setup .NET Core SDK
+        uses: actions/setup-dotnet@v4.0.0
